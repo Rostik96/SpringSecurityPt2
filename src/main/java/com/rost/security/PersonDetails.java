@@ -13,7 +13,6 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter //Чтобы получать данные аутентифицированного пользователя.
-@Component
 public class PersonDetails implements UserDetails {
     private final Person person;
 
