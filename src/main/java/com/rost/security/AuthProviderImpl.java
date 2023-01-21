@@ -1,5 +1,7 @@
 package com.rost.security;
 
+import java.util.Collections;
+
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
