@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.rost.models.Person;
 
 @Repository
-public interface PersonRepository extends JpaRepository<Person, Long> {
+public interface PeopleRepository extends JpaRepository<Person, Long> {
     Optional<Person> findUserByName(String username);
 }

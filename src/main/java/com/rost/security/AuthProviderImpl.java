@@ -8,18 +8,18 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import com.rost.services.PersonDetailsService;
+import com.rost.services.PeopleDetailsService;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Component
 public class AuthProviderImpl implements AuthenticationProvider {
-    private final PersonDetailsService personDetailsService;
+    private final PeopleDetailsService peopleDetailsService;
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         String username = authentication.getName();
         String password = authentication.getCredentials().toString();
-        UserDetails personDetails = personDetailsService.loadUserByUsername(username);
+        UserDetails personDetails = peopleDetailsService.loadUserByUsername(username);
 
         if (!password.equals((personDetails.getPassword())))
             throw new BadCredentialsException("Incorrect password");
