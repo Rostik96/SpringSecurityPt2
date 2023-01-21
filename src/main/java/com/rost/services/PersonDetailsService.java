@@ -11,7 +11,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 @Service
-public class PersonService implements UserDetailsService {
+public class PersonDetailsService implements UserDetailsService {
     private final PersonRepository personRepository;
 
     @Override
