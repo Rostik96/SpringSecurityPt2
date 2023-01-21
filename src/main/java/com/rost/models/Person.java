@@ -24,7 +24,7 @@ public class Person {
     private int id;
 
     @Column(name = "username")
-    private String username;
+    private String name;
 
     @Column(name = "year_of_birth")
     private int yearOfBirth;
