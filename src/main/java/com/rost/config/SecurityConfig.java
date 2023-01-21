@@ -4,9 +4,14 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+import com.rost.security.AuthProviderImpl;
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    private final AuthProviderImpl authProvider;
     protected void configure(AuthenticationManagerBuilder builder) {
-        builder.authenticationProvider(null); //TODO: внедрить провайдер
+        builder.authenticationProvider(authProvider);
     }
 }

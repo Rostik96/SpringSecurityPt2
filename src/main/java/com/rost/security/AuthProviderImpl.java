@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Component
-public class AuthProviderImp implements AuthenticationProvider {
+public class AuthProviderImpl implements AuthenticationProvider {
     private final PersonDetailsService personDetailsService;
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
