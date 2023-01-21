@@ -22,6 +22,6 @@ public class HelloController {
          */
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         PersonDetails personDetails = (PersonDetails) authentication.getPrincipal();
-        return new ModelAndView("user", "person", personDetails.getPerson());
+        return new ModelAndView("user", "principal", personDetails.getPerson());
     }
 }
